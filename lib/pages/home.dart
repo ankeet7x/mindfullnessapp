@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mindfulnessapp/components/appbar.dart';
 import 'package:mindfulnessapp/components/colors.dart';
 import 'package:mindfulnessapp/components/midcontainer.dart';
+import 'package:mindfulnessapp/components/seemore.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,7 +23,11 @@ class _HomePageState extends State<HomePage> {
               color: bgColor,
             ),
           ),
-          new MidContainer(size: size)
+          new MidContainer(size: size),
+          SizedBox(
+            height: size.height * 0.07,
+          ),
+          new Seemorerow()
         ],
       ),
     );
