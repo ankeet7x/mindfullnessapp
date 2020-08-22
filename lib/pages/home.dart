@@ -15,7 +15,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: PreferredSize(
+        child: Appbar(
+          title: "Dashboard",
+        ),
+        preferredSize: const Size.fromHeight(60),
+      ),
       body: Column(
         children: <Widget>[
           SizedBox(
