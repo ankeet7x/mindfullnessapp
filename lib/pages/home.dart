@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindfulnessapp/components/appbar.dart';
 import 'package:mindfulnessapp/components/colors.dart';
+import 'package:mindfulnessapp/components/exercises.dart';
 import 'package:mindfulnessapp/components/midcontainer.dart';
 import 'package:mindfulnessapp/components/seemore.dart';
 
@@ -25,9 +26,13 @@ class _HomePageState extends State<HomePage> {
           ),
           new MidContainer(size: size),
           SizedBox(
-            height: size.height * 0.07,
+            height: size.height * 0.03,
           ),
-          new Seemorerow()
+          new Seemorerow(),
+          SizedBox(
+            height: size.height * 0.025,
+          ),
+          new ExercisesRow(size: size)
         ],
       ),
     );
