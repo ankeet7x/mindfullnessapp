@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mindfulnessapp/components/appbar.dart';
 import 'package:mindfulnessapp/components/colors.dart';
+import 'package:mindfulnessapp/components/midcontainer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,21 +11,19 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: bgColor,
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          color: primaryColor,
-          onPressed: () {},
-        ),
-        title: Text(
-          "Dashboard",
-          style: TextStyle(
-              fontSize: 25, color: primaryColor, fontWeight: FontWeight.bold),
-        ),
+      appBar: buildAppBar(),
+      body: Column(
+        children: <Widget>[
+          SizedBox(
+            height: size.height * 0.04,
+            child: Container(
+              color: bgColor,
+            ),
+          ),
+          new MidContainer(size: size)
+        ],
       ),
     );
   }
