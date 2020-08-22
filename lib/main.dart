@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'pages/bottomnav.dart';
 import 'pages/home.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "MindFulness",
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: BottomNav(),
     );
   }
 }
